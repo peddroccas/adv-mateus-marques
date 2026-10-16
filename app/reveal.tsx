@@ -17,8 +17,10 @@ export default function Reveal() {
           const el = entry.target as HTMLElement;
           observer.unobserve(el);
           el.classList.replace("reveal-pending", "reveal-in");
+          // Imagens animam a <img> interna; os demais animam o próprio elemento.
+          const isImage = el.dataset.reveal === "image";
           el.addEventListener("animationend", function done(event) {
-            if (event.target !== el) return;
+            if (isImage ? event.animationName !== "reveal-clip" : event.target !== el) return;
             el.removeEventListener("animationend", done);
             el.classList.remove("reveal-in");
           });

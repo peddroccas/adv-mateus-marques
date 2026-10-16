@@ -51,12 +51,16 @@
 
     /* Demais seções: escondidas só enquanto estão fora da tela, animam ao entrar */
     .reveal-pending { opacity: 0; }
-    .reveal-pending[data-reveal="image"] { opacity: 1; clip-path: inset(100% 0 0 0); }
+    /* Imagens: o recorte fica na <img>, não no elemento observado (senão ele nunca "entra" na tela) */
+    .reveal-pending[data-reveal="image"] { opacity: 1; }
+    .reveal-pending[data-reveal="image"] > img { clip-path: inset(100% 0 0 0); }
     .reveal-in {
       animation: reveal-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
       animation-delay: calc(var(--i, 0) * 90ms);
     }
-    .reveal-in[data-reveal="image"] { animation: reveal-clip 1.1s cubic-bezier(0.7, 0, 0.2, 1) both; }
-    .reveal-in[data-reveal="image"] > img { animation: reveal-zoom 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    .reveal-in[data-reveal="image"] { animation: none; }
+    .reveal-in[data-reveal="image"] > img {
+      animation: reveal-clip 1.1s cubic-bezier(0.7, 0, 0.2, 1) both, reveal-zoom 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
   }
 }
