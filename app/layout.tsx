@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Reveal from "./reveal";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="bg-cream pb-[77px] font-sans text-[14px] text-navy antialiased md:pb-0">
         {children}
         <Reveal />
+        <Analytics />
       </body>
     </html>
   );
