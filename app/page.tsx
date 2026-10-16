@@ -78,7 +78,7 @@ export default function Home() {
       </header>
 
       <main id="inicio">
-        <section className="bg-cream pt-10 md:pt-[72px] md:pb-20">
+        <section className="bg-cream pt-10 pb-14 md:pt-[72px] md:pb-20">
           <div className={`${wrap} grid grid-cols-1 items-center gap-9 md:grid-cols-[minmax(0,1fr)_300px] md:gap-8 nav:grid-cols-[minmax(0,1fr)_360px] nav:gap-[38px] lg:grid-cols-[minmax(0,1fr)_448px] lg:gap-16`}>
             <div className="hero-copy flex flex-col items-start gap-[22px] md:max-w-[736px] md:gap-[27.2px]">
               <Label>{hero.label}</Label>
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-soft pt-[104px] pb-14 md:py-20" id="atuacao">
+        <section className="bg-soft py-14 md:py-20" id="atuacao">
           <div className={wrap}>
             <div className="mb-10 flex flex-col items-start gap-[15px]" data-reveal-stagger>
               <Label>{practice.label}</Label>
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-cream pt-[82px] md:pb-[72px]" aria-label={principles.label}>
+        <section className="bg-cream py-14 md:pt-[82px] md:pb-[72px]" aria-label={principles.label}>
           <div className={`${wrap} flex flex-col gap-9`}>
             <div data-reveal><Label>{principles.label}</Label></div>
             <ul className="grid grid-cols-2 items-start gap-x-5 gap-y-[27.8px] md:gap-8 nav:grid-cols-4" data-reveal-stagger>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-navy pt-32 pb-14 text-white md:py-20" id="sobre">
+        <section className="bg-navy py-14 text-white md:py-20" id="sobre">
           <div className={`${wrap} grid grid-cols-1 gap-8 [grid-template-areas:'name'_'photo'_'desc'] md:grid-cols-[280px_minmax(0,1fr)] md:items-start md:gap-x-8 md:gap-y-6 md:[grid-template-areas:'photo_name'_'photo_desc'] nav:grid-cols-[300px_minmax(0,1fr)] nav:gap-x-[45px] lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-x-24 lg:gap-y-10`}>
             <div className="flex flex-col items-start gap-6 [grid-area:name]" data-reveal-stagger>
               <Label light>{about.label}</Label>
@@ -157,7 +157,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-cream pt-14 md:py-20" id="como-funciona">
+        <section className="bg-cream py-14 md:py-20" id="como-funciona">
           <div className={`${wrap} flex flex-col items-start gap-8`}>
             <div className="flex flex-col items-start gap-[15px] md:gap-4" data-reveal-stagger>
               <Label>{howItWorks.label}</Label>
@@ -176,7 +176,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-soft pt-28 pb-14 md:py-20" id="duvidas">
+        <section className="bg-soft py-14 md:py-20" id="duvidas">
           <div className={`${wrap} grid grid-cols-1 items-start gap-7 md:grid-cols-[280px_minmax(0,1fr)] md:gap-8 nav:grid-cols-[300px_minmax(0,1fr)] nav:gap-12 lg:grid-cols-[352px_minmax(0,1fr)] lg:gap-24`}>
             <div className="flex flex-col items-start gap-[15px] md:gap-4" data-reveal-stagger>
               <Label>{faq.label}</Label>
